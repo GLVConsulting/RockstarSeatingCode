@@ -1,0 +1,1159 @@
+﻿
+body
+{
+    color: #696969;
+    font-size: .80em;
+    font-family: Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    position:relative;
+    text-align: center;
+}
+#page *, table, dl, dt, dd, p, span, h1, h2, ul
+{
+    text-align: left;
+}
+a img{ border:none; }
+a:link, a:visited, a:hover, a:active
+{
+    color: #999;
+    text-decoration:none;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+.p0{ margin:0px; }
+.p3{ font-weight:bold; margin:0px; }
+	
+ul, ul li
+{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+ol
+{
+	margin:0;
+	padding-left:25px;
+}
+.bSpacer, .bSpacer2
+{
+	line-height:1px;
+	height:1px;
+	border-top:1px solid #dfdfdf;
+	margin:15px 5px;
+}
+.bSpacer2
+{
+	margin:15px 0;
+	width:530px;
+}
+#page #main a.link
+{
+    color:#6387A7;
+    text-decoration:underline;
+}
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+.bold{ font-weight:bold; }
+.iBlock{ display:inline-block; }
+.rtMarg20px{ margin-right:16px; }
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+#page
+{
+    margin: 0 auto;
+    width: 980px;
+}
+#header
+{
+	height:145px;
+    position: relative;
+    margin: 0px;
+    padding: 10px 0 0;
+    width: 100%;
+}
+
+#header h1
+{
+    border: none;
+    color: #f9f9f9;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 2em;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+}
+
+.userLinks
+{
+    background-color:#fff;
+    border:1px solid #999;
+    bottom:41px;
+    height:85px;
+    padding:10px;
+    position:absolute;
+    right:0px;
+    text-align:right;
+    width:180px;
+    z-index:10;
+}
+#page #header .memberLinks
+{
+	background-color:#777;
+	border:1px solid #ccc;
+	padding:4px;
+	right:0px;
+	text-align:center;
+}
+
+.memberLinks a:link, .memberLinks a:visited, 
+.memberLinks a:active, .memberLinks a:hover{ color:#fff; }
+.memberLinks a:hover{ text-decoration:underline; }
+	
+
+
+
+#main
+{
+	background:url(../img/mainBG.jpg) top left repeat-y;
+    border:1px solid #bcbcbc;
+    border-width:0 1px;
+    display:inline-block;
+    height:auto;
+    position:relative;
+    width:978px;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+#footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color: #3a4f63;
+    width: 100%;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 0;
+    border: 1px solid #cdcdcd;
+}
+
+fieldset p
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline
+{
+    display: inline;
+}
+
+legend
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry
+{
+    width: 300px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry
+{
+    width: 300px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+}
+#loginPage a:link, #loginPage a:visited, #loginPage a:active, #loginPage a:hover
+{
+	color:#777;
+	text-decoration:underline;
+}
+
+
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+    height:0;
+    line-height:0;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay
+{
+    display: block;
+    text-align: right;
+}
+.loginDisplay #welcomeMsg
+{
+    text-align:right;
+}
+
+.loginDisplay a:link, .loginDisplay a:visited, .loginDisplay a:hover
+{
+    /*	color: #000;	*/
+}
+#myAccountLnk
+{
+    color:;
+    font-weight:normal;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+.errMsg, .statusMsg
+{
+    background-color: #FFFFCC;
+    border: 1px solid #ccc;
+    color: Red;
+    display: block;
+    font-size: 12px;
+    margin: 10px 0px;
+    padding: 10px;
+}
+.statusMsg
+{
+    background-color: #FFF;
+    color:#000;
+}
+#main .errMsg li
+{
+	list-style-type:disc;
+	margin-left:25px;
+	padding:4px;
+}
+	
+
+
+
+
+
+.fLeft
+{
+    float: left;
+}
+.fRight
+{
+    float: right;
+}
+.fLeftChildren *
+{
+    float: left;
+}
+.relative
+{
+    position: relative;
+}
+.column
+{
+    float: left;
+    width: 49%;
+}
+.txtFldMsg
+{
+    color: Red;
+    font-size: 11px;
+    display: block;
+}
+.label, label
+{
+    display: block;
+    width: 200px;
+}
+
+div.p
+{
+    margin-top: 12px;
+}
+
+
+
+/* GENERAL	*/
+.errorBox
+{
+    border: 1px solid red;
+    background-color: #ffffcc;
+    padding: 10px;
+    width: 600px;
+}
+.errorBox ul
+{
+    margin-top: 0px;
+}
+
+dt
+{
+    color: #333;
+    font-weight: bold;
+    margin: 20px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+/*  BEGIN: custom css for main site ******************************************************/
+
+
+
+/* SITEWIDE NAV BAR	*/
+#siteTopBar
+{
+	height:20px;
+	text-align:center;
+	position:relative;
+	width:100%;
+}
+#siteTopBar .innerWrap
+{
+	width:980px;
+	margin:0 auto;
+	padding-top:1px;
+	position:relative;
+	z-index:1;
+}
+#siteTopBar #topBar_bckgrnd
+{	
+	background-color:#d7cfc2;
+	background-color:#DFDACF;
+	border-bottom:1px solid #ccc;
+	
+	/*filter:alpha(opacity=50); opacity:0.5; -moz-opacity:0.5;*/
+	height:20px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	z-index:-0;
+}
+.rightBar
+{
+	float:right;
+	background:none transparent;
+}
+.leftBar
+{
+	float:left;
+	background:none transparent;
+}
+.leftBar li, 
+.rightBar li
+{
+	float:left;
+	margin:0 10px;
+	color:#986;
+}
+.rightBar li a, .leftBar li a
+{
+	color:#333;
+	font-weight:bold;
+	text-decoration:none;
+}
+.rightBar li{ float:right; }
+
+
+/** HEADER **/
+#gotQuestions
+{
+	bottom:42px;
+	position:absolute;
+	right:119px;
+	width:500px;
+}
+#gotQuestions img 
+{
+	margin:0 3px 0 10px;
+	position:relative;
+	top:1px;
+}
+#gotQuestions li
+{
+	color:#777;
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+}
+#hdrInfoBox
+{
+	
+	border:1px solid #ddd;
+	background-color:#f7f7f7;
+	color:#777;
+	font-size:11px;
+	height:85px;
+	padding:8px 5px;
+	position:absolute;
+	bottom:42px;
+	right:0px;
+	text-align:center;
+	width:180px;
+}
+
+
+
+
+/** TOP NAV **/
+#topNav
+{
+	/*
+    background-color:#6387A7;
+    background-color:#bfb49e;
+    background-color:#6e878c;
+	*/
+    
+    background:url(../img/topnav_bckgnd.png) top left repeat-x;
+    border-width:0 1px;
+    float:left;
+    height:35px;
+    margin:7px 0 0 0;
+    width:980px;
+}
+#topNav .leftBar
+{
+	margin:7px 0 0 50px;
+}
+#topNav .leftBar li a:link, #topNav .leftBar li a:visited, #topNav.leftBar li a:hover
+
+{
+    color: #6387A7;	/*	leftNav blue	*/
+    color:#fff;
+    font-size:17px;
+    text-decoration: none;
+}
+#topNav .leftBar li
+{
+	background:url(../img/menuIcon.png) no-repeat 0px 0px;	
+	padding-left:25px;
+	margin-right:20px;
+}
+#searchBoxWrapper
+{
+	bottom:60px;
+	height:65px;
+	padding:4px;	
+	position:absolute;
+	right:215px;
+	width:420px;
+	background:url(../img/searchBoxWrapper.jpg) no-repeat top left;
+}
+#searchBoxWrapper #hdrSrchTxt
+{
+    color:#555;
+    position:absolute;
+    top:14px;
+    left:6px;    
+    width:353px;
+    height:20px;
+    font-size:18px;
+}
+#searchBoxWrapper #hdrSrchBtn
+{
+	background-color:Red;	
+	cursor:pointer;
+	filter:alpha(opacity=00); opacity:0; -moz-opacity:0;
+	height:40px;
+	position:absolute;
+	right:13px;
+	top:9px;
+	width:40px;
+}
+.searchFrmBtn
+{
+	position:relative;
+	top:5px;
+}
+#tagline
+{
+	font-size:10px;
+	left:72px;
+	position:absolute;
+	top:70px;
+}
+
+
+
+/** LEFT NAV **/
+#leftNav
+{
+	border-right:1px dotted #ccc;
+	display:none;
+    margin: 0;
+    width: 190px;
+    
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    z-index:-1;
+}
+#leftNavMenu
+{
+	display:none;
+	float:left;
+    padding: 10px 10px 0;
+	width:195px;
+	z-index:1;
+}
+#leftNavMenu li
+{
+	border:1px solid #ccc;
+	line-height:14px;
+    list-style-type: none;
+    margin: 0;
+    padding: 2px 0 2px 4px;
+}
+#leftNavMenu li ul li{ border:none; }
+#leftNavMenu li a:link, #leftNavMenu li a:hover, #leftNavMenu li a:visited
+{
+    color: #333;
+    font-size:11px;
+    text-decoration: none;
+}
+#leftNavMenu li a:hover
+{
+    text-decoration: underline;
+}
+#leftNavMenu ul li ul 
+{
+	width:163px;
+}
+
+
+
+#leftNavMenu .navHdr
+{
+	background:url(../img/navhdr_bckgnd.jpg) top left no-repeat #bfb49e;
+	border-width:1px 1px 0;
+    margin:10px 0 0;
+    padding:4px 0 4px 7px;
+}
+#leftNavMenu .navHdr a:link, #leftNavMenu .navHdr a:hover, #leftNavMenu .navHdr a:visited
+{
+    color: #fff;
+    font-size: 13px;
+    text-decoration:none;
+}
+
+#genInfoBox dl
+{
+	margin:0;
+	padding:0;
+}
+#genInfoBox dt
+{
+	color:#555;
+	margin-bottom:2px;
+	padding:0;
+}
+#genInfoBox dd
+{
+	font-size:10px;
+	margin:0;
+	padding:0 0 0 5px;
+}
+#amexFPG
+{
+	display:inline-block;
+	margin:0 auto;
+}
+
+
+
+
+/* this will push the height of #main out */
+#content
+{
+    float: left;
+    padding:20px 10px;
+    width: 730px;
+}
+
+
+/** FOOTER **/
+#footer
+{
+	background-color:#DFDACF;
+	border:4px double #ccc;
+	border-width:4px 0;
+    margin-top:-4px;
+    position:relative;
+    text-align:center;
+}
+#footer ul
+{
+    display: inline-block;
+    padding: 0;
+    margin: 0 auto;
+    width:355px;
+}
+#footer #topRow, #footer #midRow{ width:auto; }
+#footer #bottomRow{ width:auto; }
+#footer #topRow{ *width:432px; }
+#footer #midRow{ *width:250px; }
+#footer #bottomRow{ *width:285px; }
+
+
+#footer ul li
+{
+    float: left;
+    list-style-type: none;
+    padding: 4px 7px;
+}
+#footer ul li a:link, #footer ul li a:hover, #footer ul li a:visited
+{
+    color: #777;
+}
+#footer_bckgnd
+{
+	position:absolute;
+	top:0px;
+	bottom:0px;
+	width:100%;
+	z-index:-1;
+	
+	filter:alpha(opacity=60); opacity:0.6; -moz-opacity:0.6;
+}
+
+
+
+
+
+/*  END: custom css for main site ******************************************************/
+
+
+
+
+#ssc_filterAndListCell div
+{
+	width:402px;
+}
+
+
+
+/*
+
+
+#FDF5CE		yellow
+#DFDACF		footer, siteTopNav
+#6e878c		rtSideBar navHdr?
+#6387a7		a_3
+#161f24		topNavBckgrnd
+#bfb49e		leftNavMenu navHdr
+#F2EFDE		light tan, lightest brown in swatch
+#394A5E		a_1
+*/
+
+
+
+
+#rtSideBar
+{
+	bottom:0px;
+	display:none;
+	float:right;
+	padding:10px;
+	width:180px;
+}
+#rtSideBar .navHdr
+{
+	background-color:#6e878c;
+	border:1px solid #bfb49e;
+	border-width:1px 1px 1px;
+	border-bottom:1px solid #ccc;
+	color:#fff;
+	padding:2px 5px;	
+}
+#rtSideBar #mailingList
+{
+	margin-top:10px;
+}
+#rtSideBar ul li
+{
+	border:1px solid #ccc;
+	border-width:0 1px 1px;
+	padding:4px;
+}
+
+#rtSideBar #btn_emailList
+{
+	position:relative;
+	top:4px;
+}
+
+.sidebar .padding{ width:158px; }
+.sidebar #inputZip
+{
+	color:#777;
+	font-size:15px;
+	height:19px;
+	padding:0px;
+	position:relative;
+	top:2px;
+	width:100px;
+}
+.sidebar #byZip #byZipBtn
+{
+	background-color:#DFDACF;
+	border:1px solid #555;
+	color:#434343;
+	cursor:pointer;
+	font-size:14px;
+	height:18px;
+	margin-left:15px;
+	padding:2px 4px;
+	text-align:center;
+}
+#byZip .navHdr
+{
+	color:#fff;
+	font-size:13px;
+}
+#byZip .padding
+{
+	padding:5px;
+	width:170px;
+}
+#byZip #localEventCategories
+{
+	margin-top:5px;
+}
+#byZip #localEventCategories li
+{
+	float:left;
+	margin:0px;
+	padding:0;
+}
+#byZip #localEventCategories li label
+{
+	width:auto;
+	font-size:10px;
+	*font-size:9px;
+}
+#byZip #localEventCategories li label input
+{
+	margin-right:0px;
+	position:relative;
+	top:2px;
+}
+
+
+
+#rtSideBar #socialBtns
+{
+	border:1px dotted #ddd;
+	border-width:1px 0;
+	display:inline-block;
+	margin-top:15px;
+	height:220PX;
+}	
+#rtSideBar #socialBtns div.row
+{
+	display:inline-block;
+	height:100PX;
+}
+#rtSideBar #socialBtns div.row div
+{
+	display:inline-block;
+	float:left;
+	height:120px;
+	text-align:center;
+	width:79px;
+}
+#socialBtns div.row a
+{
+	DISPLAY:inline-block;
+	height:20PX;
+}
+#rtSideBar #socialBtns div.row a.rowImgLnk
+{
+	height:75px;
+	overflow:hidden;
+	width:79px;
+	margin:0px;
+	position:relative;
+}
+#rtSideBar #socialBtns div.row a:hover
+{
+	color:#555;
+	text-decoration:underline;
+}
+#rtSideBar #socialBtns div.row a img
+{
+	position:absolute;
+	left:-3px;
+}
+#rtSideBar #socialBtns div.row .facebookLnk img
+{
+	
+}
+#rtSideBar #socialBtns div.row .twitterLnk img, 
+#rtSideBar #socialBtns div.row .bookmarkLnk img
+{
+	left:-93px;	
+}
+#rtSideBar #socialBtns div.row .emailUsLnk img, 
+#rtSideBar #socialBtns div.row .bookmarkLnk img
+{
+	top:-75px;
+	
+}
+
+#rtSideBar .promoSpot
+{
+	border:1px solid #ccc;	
+}
+
+
+#ourTopFive
+{
+	
+	margin:25px 0;	
+	
+}
+
+
+
+
+#sellTickets
+{
+	background-color:#DFDACF;
+	border:1px solid #ccc;
+}
+#sellTickets .navHdr
+{
+	background-color:#fff;
+	border-width:0 0 1px;
+	color:#6E878C;
+	font-weight:bold;
+	padding:4px 0;
+	text-align:center;
+}
+#sellTickets .padding{ padding:0 8px 25px; }
+#sellTickets ol
+{
+    
+}
+#sellTickets ol li
+{
+	font-size:12px;
+}
+#consignmentLnk_rtSidebar:link, #consignmentLnk_rtSidebar:active, #consignmentLnk_rtSidebar:visited, #consignmentLnk_rtSidebar:hover
+{
+	color:#6e878c;
+	font-size:11px;
+	float:right;
+	margin-top:3px;
+}
+.sidebarBox .padding
+{
+	border:1px solid #ccc;
+	border-width:0 1px 1px;
+	padding:10px;
+}
+#ourTopFive li a:link, #ourTopFive li a:active, #ourTopFive li a:visited, #ourTopFive li a:hover, 
+#fanFaves li a:link, #fanFaves li a:active, #fanFaves li a:visited, #fanFaves li a:hover
+{
+	color:#63a787
+}
+#ourTopFive li a:hover, 
+#fanFaves li a:hover
+{
+	color:#555;
+	text-decoration:underline;
+}
+
+
+
+
+/***	#####################		TICKET NETWORK PLUGIN STYLES ##########################	*/
+
+#content .tn_results_header, 
+#content .tn_results_header_subhead, 
+#content Table.tn_results
+{
+	width:530px;
+}
+#page tr.tn_results_divider{ background:none; line-height:1px; height:1px; }
+#page td.tn_results_divider{ /*border:1px solid #ddd; border-width:1px 0;*/ padding:0px 0px; line-height:1px; height:1px; }
+#page .tn_results_pages
+{
+	color:#777;
+	font-weight:bold;
+}
+.tn_results_pages a:link, .tn_results_pages a:active, .tn_results_pages a:visited, .tn_results_pages a:hover 
+{
+	color:#656565;
+	font-weight:normal;
+}
+.tn_results_pages a:hover{ text-decoration:underline; }
+
+
+
+#citySearch .tn_results_header_title{ display:none;	}
+#citySearch h1{ color:#333; }
+
+.sellBtn
+{
+	cursor:pointer;
+	margin-top:4px;
+	display:block;
+}
+
+
+
+
+
+/*	MISC --------------------------------------------------------------- */
+
+#policies{ width:540px;	}
+
+#ticketRequestForm{ padding-left:20px; width:600px; }
+#ticketRequestForm .tn_results_notfound
+{
+	
+	margin:5px 0px;
+	padding:10px;
+	line-height:14px;	
+}
+#ticketRequestForm .tn_results_header_venue, #ticketRequestForm .tn_results_header_datetime, #ticketRequestForm .tn_results_header_maplink
+{
+	color:#777;	
+}
+#ticketRequestForm .tn_results_header_maplink a:link, #ticketRequestForm .tn_results_header_maplink a:visited, 
+#ticketRequestForm .tn_results_header_maplink a:active, #ticketRequestForm .tn_results_header_maplink a:hover
+{
+	color:#6E878C;
+}
+
+#generalErr .errorBox
+{
+	width:530px;
+	margin:20px 0;
+}
+#contactUs{ height:1200px; }
+
+
+/*****	GRIDVIEW STYLES	************************/
+
+table.gridview th
+{
+	background-color:#cdcdcd;
+}
+table.gridview th a
+{
+	color:#333;
+	text-decoration:underline;	
+}
+table.gridview td
+{
+	color:#444;
+} 
+	
+
+
+#page a.myAccountLnkBtns
+{
+	background-color:#999;
+	border:1px solid #333;
+	color:#fff;
+	padding:4px;
+}
+
+
+
+#mainAdSlot
+{
+	border:1px solid #ddd;
+	height:150px;
+	margin-top:35px;
+	overflow:hidden;
+	width:528px;
+}
+
+
+
+
+/**	CALENDAR CONTROL/JQUERY UI-DATEPICKER	
+
+#ui-datepicker
+{
+}
+
+#ui-datepicker-header
+{
+}
+
+#ui-datepicker-prev
+{
+}
+
+#ui-datepicker-next
+{
+}
+
+#ui-datepicker-title
+{
+}
+
+#ui-datepicker-month
+{
+}
+
+#ui-datepicker-year
+{
+}
+
+#ui-datepicker-calendar
+{
+}
+
+**/
+

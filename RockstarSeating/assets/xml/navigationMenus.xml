@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<navigationMenu>
+	<topNav>
+		<menuItem url="/Default.aspx" id="home">Home</menuItem>
+		<!-- revisit this with zip code cookie -->
+		<menuItem url="/tickets/search.aspx?kwds=seattle%20concerts">Concerts</menuItem>
+		<menuItem id="3">Theatre</menuItem>
+		<menuItem id="2_24">Comedy</menuItem>
+		<menuItem id="3_35">Las Vegas</menuItem>
+		<menuItem id="3_70">Broadway</menuItem>
+		<menuItem id="1">Sports</menuItem>
+	</topNav>
+	
+	
+	<leftNav>
+		<navItem>
+			<menuHdr id="1">SPORTS</menuHdr>
+			<menuItem>NBA</menuItem>
+			<menuItem>NFL</menuItem>
+			<menuItem>MLB</menuItem>
+			<menuItem>NHL</menuItem>
+			<menuItem>UFC</menuItem>
+			<menuItem>Boxing</menuItem>
+			<menuItem>All Sports Tickets</menuItem>
+		</navItem>
+		
+		<navItem>
+			<menuHdr id="2">CONCERTS</menuHdr>
+			<menuItem>Kenny Chesney</menuItem>
+			<menuItem>Neil Diamond</menuItem>
+			<menuItem>Jay-Z &amp; Kanye</menuItem>
+			<menuItem>Ryan Adams</menuItem>
+			<menuItem>Joe Bonamassa</menuItem>
+			<menuItem>All Concerts Tickets</menuItem>
+			
+		</navItem>
+
+		<navItem>
+			<menuHdr id="3">THEATER &amp; ARTS</menuHdr>
+			<menuItem>Wicked</menuItem>
+			<menuItem>The Lion King</menuItem>
+			<menuItem>Jersey Boys</menuItem>
+			<menuItem>Jeff Dunham</menuItem>
+			<menuItem>Ron White</menuItem>
+			<menuItem>All Theater Tickets</menuItem>
+		</navItem>
+		
+		<navItem>
+			<menuHdr id="4">LAS VEGAS</menuHdr>
+			<menuItem>Cirque Du Soleil</menuItem>
+			<menuItem>Celine Dion</menuItem>
+			<menuItem>David Copperfield</menuItem>
+			<menuItem>Blue Man Group</menuItem>
+			<menuItem>Elton John</menuItem>
+		</navItem>
+	</leftNav>
+</navigationMenu>

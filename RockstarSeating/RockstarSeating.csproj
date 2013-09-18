@@ -1,0 +1,1641 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{03A8787A-F194-4C50-91FC-5A377C84F396}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RockstarSeating</RootNamespace>
+    <AssemblyName>RockstarSeating</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.3.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.3.7\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity, Version=6.3.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.3.7\Assemblies\v4.0\MySql.Data.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.3.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.3.7\Assemblies\v4.0\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\LogOut.aspx" />
+    <Content Include="Account\myAccount.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterSuccess.aspx" />
+    <Content Include="Account\RequestConsignorStatus.aspx" />
+    <Content Include="Admin\approveConsignor.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\Testimonials.aspx" />
+    <Content Include="assets\img\adImgs\accutint.jpg" />
+    <Content Include="assets\img\adImgs\allCityBailBonds.png" />
+    <Content Include="assets\img\adImgs\benz_seattle.png" />
+    <Content Include="assets\img\adImgs\commAuto.png" />
+    <Content Include="assets\img\amex_ccv.jpg" />
+    <Content Include="assets\img\boysNgirlsClubs.png" />
+    <Content Include="assets\img\buyNowBtn.png" />
+    <Content Include="assets\img\categories\sports\sports_baseballMLB.jpg" />
+    <Content Include="assets\img\categories\sports\sports_basketballCollege.jpg" />
+    <Content Include="assets\img\categories\sports\sports_basketballNBA.jpg" />
+    <Content Include="assets\img\categories\sports\sports_boxing.jpg" />
+    <Content Include="assets\img\categories\sports\sports_footballCollege.jpg" />
+    <Content Include="assets\img\categories\sports\sports_footballNFL.jpg" />
+    <Content Include="assets\img\categories\sports\sports_golf.jpg" />
+    <Content Include="assets\img\categories\sports\sports_hockeyNHL.jpg" />
+    <Content Include="assets\img\categories\sports\sports_other.jpg" />
+    <Content Include="assets\img\categories\sports\sports_racing.jpg" />
+    <Content Include="assets\img\categories\sports\sports_soccer.jpg" />
+    <Content Include="assets\img\categories\sports\sports_tennis.jpg" />
+    <Content Include="assets\img\creditcards.gif" />
+    <Content Include="assets\img\creditCards.png" />
+    <Content Include="assets\img\ebay.png" />
+    <Content Include="assets\img\emailIcon.png" />
+    <Content Include="assets\img\facebook-36x36.jpg" />
+    <Content Include="assets\img\icons.png" />
+    <Content Include="assets\img\img_fraud_protec_logo.gif" />
+    <Content Include="assets\img\leftNavMainBG.jpg" />
+    <Content Include="assets\img\mainBG.jpg" />
+    <Content Include="assets\img\navhdr_bckgnd.jpg" />
+    <Content Include="assets\img\phone.png" />
+    <Content Include="assets\img\promoBox\allstarjam.jpg" />
+    <Content Include="assets\img\menuIcon.png" />
+    <Content Include="assets\img\navhdr_bckgnd.png" />
+    <Content Include="assets\img\promoBox\cirquedusoleil.jpg" />
+    <Content Include="assets\img\promoBox\rogerdaltrey.jpg" />
+    <Content Include="assets\img\promoBox\taylorswift.jpg" />
+    <Content Include="assets\img\promoBox\watchthethronetour.jpg" />
+    <Content Include="assets\img\rockstar_guarantee.jpg" />
+    <Content Include="assets\img\rmhc.jpg" />
+    <Content Include="assets\img\rtNavMainBG.jpg" />
+    <Content Include="assets\img\searchBoxImg.png" />
+    <Content Include="assets\img\searchBoxWrapper.jpg" />
+    <Content Include="assets\img\searchIcon.png" />
+    <Content Include="assets\img\siteIcon.ico" />
+    <Content Include="assets\img\buynow.gif" />
+    <Content Include="assets\img\topnav_bckgnd.png" />
+    <Content Include="assets\img\twitter_logo-a.png" />
+    <Content Include="assets\img\promoBox\UFC.jpg" />
+    <Content Include="assets\img\visa_mc_discover_ccv.jpg" />
+    <Content Include="assets\Scripts\gears_init.js" />
+    <Content Include="assets\Scripts\geoLocator.js" />
+    <Content Include="assets\Scripts\home.js" />
+    <Content Include="assets\Scripts\jquery-1.6.2.min.js" />
+    <Content Include="assets\Scripts\jquery-ui-1.8.15.custom.min.js" />
+    <Content Include="assets\Styles\home.css" />
+    <Content Include="assets\Styles\ui-lightness\images\calendar.png" />
+    <Content Include="assets\Styles\images\results_header_background.gif" />
+    <Content Include="assets\Styles\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="assets\Styles\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="assets\Styles\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="assets\Styles\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="assets\Styles\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="assets\Styles\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="assets\Styles\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="assets\Styles\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="assets\Styles\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="assets\Styles\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="assets\Styles\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="assets\Styles\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="assets\Styles\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="assets\Styles\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="assets\Styles\ui-lightness\jquery-ui-1.8.15.custom.css" />
+    <Content Include="assets\xml\promoBox.xml" />
+    <Content Include="assets\xml\navigationMenus.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="content\contactus.aspx" />
+    <Content Include="content\cvv2.aspx" />
+    <Content Include="content\generalError.aspx" />
+    <Content Include="content\consignmentAgreement.html" />
+    <Content Include="content\policies.aspx" />
+    <Content Include="assets\img\hdrLogo.png" />
+    <Content Include="broadway.aspx" />
+    <Content Include="concerts.aspx" />
+    <Content Include="content\widgets\footer.ascx" />
+    <Content Include="content\widgets\header.ascx" />
+    <Content Include="content\widgets\leftNav.ascx" />
+    <Content Include="content\widgets\rightSidebar.ascx" />
+    <Content Include="content\widgets\siteTopBar.ascx" />
+    <Content Include="dataFiles\StubHubs_MetroArea_Tree.aspx" />
+    <Content Include="friends.aspx" />
+    <Content Include="lasvegas.aspx" />
+    <None Include="Service References\TNWebSvc_StringInputs\RockstarSeating.TNWebSvc_StringInputs.Category.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebSvc_StringInputs\RockstarSeating.TNWebSvc_StringInputs.Country.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebSvc_StringInputs\RockstarSeating.TNWebSvc_StringInputs.Event.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebSvc_StringInputs\RockstarSeating.TNWebSvc_StringInputs.EventPerformer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebSvc_StringInputs\RockstarSeating.TNWebSvc_StringInputs.Performer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebSvc_StringInputs\RockstarSeating.TNWebSvc_StringInputs.PerformerPercent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebSvc_StringInputs\RockstarSeating.TNWebSvc_StringInputs.PricingInformation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebSvc_StringInputs\RockstarSeating.TNWebSvc_StringInputs.States.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebSvc_StringInputs\RockstarSeating.TNWebSvc_StringInputs.TicketGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebSvc_StringInputs\RockstarSeating.TNWebSvc_StringInputs.Venue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebSvc_StringInputs\RockstarSeating.TNWebSvc_StringInputs.VenueConfiguration.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebSvc_StringInputs\tnwebservicestringinputs.wsdl" />
+    <None Include="Service References\TNWebService\configuration91.svcinfo" />
+    <None Include="Service References\TNWebService\configuration.svcinfo" />
+    <None Include="Service References\TNWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\TNWebSvc_StringInputs\configuration91.svcinfo" />
+    <None Include="Service References\TNWebSvc_StringInputs\configuration.svcinfo" />
+    <None Include="Service References\TNWebSvc_StringInputs\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Sandbox\sandbox1.aspx" />
+    <Content Include="tickets\geoLocator.aspx" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\css\main.css" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\files.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\index.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.ExampleBase.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.Program.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.AddAdExtensionOverride.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.AddAdGroup.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.AddAdGroupCriteria.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.AddAds.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.AddCampaign.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.AddCampaignAdExtension.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.AddExperiment.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.AddKeywordsPerformanceReportDefinition.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.AddLogicalUserList.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.AddNegativeCampaignCriterion.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.AddSiteLinks.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.AddUserList.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.CheckCampaigns.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.DeleteAd.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.DeleteAdGroup.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.DeleteAdGroupCriterion.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.DeleteBulkMutateJob.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.DeleteCampaign.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.DeleteExperiment.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.DeleteSiteLinks.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.DeleteUserList.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.DownloadReport.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAccountHierarchy.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllAccountChanges.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllActiveAdGroupCriteria.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllAdExtensionOverrides.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllAdGroupCriteria.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllAdGroups.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllAds.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllBulkMutateJobs.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllCampaignAdExtensions.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllCampaigns.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllCampaignTargets.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllDisapprovedAds.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllExperiments.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllImages.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllNegativeCampaignCriteria.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllPausedCampaigns.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllReportDefinitions.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllUserLists.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetAllVideos.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetCampaign.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetCampaignAlerts.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetConversionOptimizerEligibility.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetCriterionBidLandscape.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetGeoLocationInfo.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetMethodCost.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetNegativeCampaignCriteria.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetOperationCount.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetRelatedKeywords.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetRelatedPlacements.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetReportFields.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetTotalUsageUnitsPerMonth.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetTrafficEstimates.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.GetUnitCount.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.HandlePartialFailures.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.PerformBulkMutateJob.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.PromoteExperiment.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.SetAdParams.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.SetCampaignTargets.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.UpdateAd.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.UpdateAdGroup.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.UpdateAdGroupCriterion.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.UpdateCampaign.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201008.UpdateUserList.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.AddAdExtensionOverride.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.AddAdGroup.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.AddAdGroupCriteria.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.AddAds.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.AddCampaign.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.AddCampaignAdExtension.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.AddExperiment.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.AddKeywordsPerformanceReportDefinition.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.AddLogicalUserList.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.AddNegativeCampaignCriterion.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.AddSiteLinks.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.AddUserList.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.CheckCampaigns.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.DeleteAd.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.DeleteAdGroup.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.DeleteAdGroupCriterion.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.DeleteBulkMutateJob.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.DeleteCampaign.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.DeleteExperiment.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.DeleteSiteLinks.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.DeleteUserList.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.DownloadReport.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAccountHierarchy.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllAccountChanges.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllActiveAdGroupCriteria.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllAdExtensionOverrides.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllAdGroupCriteria.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllAdGroups.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllAds.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllBulkMutateJobs.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllCampaignAdExtensions.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllCampaigns.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllCampaignTargets.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllDisapprovedAds.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllExperiments.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllImages.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllNegativeCampaignCriteria.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllPausedCampaigns.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllReportDefinitions.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllUserLists.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetAllVideos.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetCampaign.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetCampaignAlerts.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetConversionOptimizerEligibility.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetCriterionBidLandscape.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetGeoLocationInfo.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetMethodCost.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetNegativeCampaignCriteria.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetOperationCount.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetRelatedKeywords.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetRelatedPlacements.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetReportFields.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetTotalUsageUnitsPerMonth.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetTrafficEstimates.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.GetUnitCount.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.HandlePartialFailures.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.PerformBulkMutateJob.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.PromoteExperiment.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.SetAdParams.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.SetCampaignTargets.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.UpdateAd.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.UpdateAdGroup.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.UpdateAdGroupCriterion.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.UpdateCampaign.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201101.UpdateUserList.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.AddAdExtensionOverride.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.AddAdGroup.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.AddAdGroupCriteria.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.AddAds.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.AddCampaign.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.AddCampaignAdExtension.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.AddCampaignTargetingCriteria.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.AddExperiment.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.AddLogicalUserList.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.AddNegativeCampaignCriterion.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.AddSiteLinks.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.AddUserList.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.CheckCampaigns.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.DeleteAd.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.DeleteAdGroup.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.DeleteAdGroupCriterion.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.DeleteBulkMutateJob.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.DeleteCampaign.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.DeleteExperiment.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.DeleteSiteLinks.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.DeleteUserList.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.DownloadAdHocReport.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.DownloadReport.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAccountHierarchy.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllAccountChanges.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllActiveAdGroupCriteria.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllAdExtensionOverrides.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllAdGroupCriteria.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllAdGroups.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllAds.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllBulkMutateJobs.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllCampaignAdExtensions.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllCampaigns.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllCampaignTargets.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllCarriers.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllDisapprovedAds.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllExperiments.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllImages.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllLanguages.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllNegativeCampaignCriteria.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllPausedCampaigns.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllReportDefinitions.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllUserLists.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetAllVideos.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetCampaign.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetCampaignAlerts.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetClientCustomerId.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetConversionOptimizerEligibility.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetCriterionBidLandscape.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetGeoLocationInfo.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetLocationCriteria.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetMethodCost.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetOperationCount.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetRelatedKeywords.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetRelatedPlacements.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetReportFields.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetTotalUsageUnitsPerMonth.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetTrafficEstimates.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.GetUnitCount.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.HandlePartialFailures.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.HandleTwoFactorAuthorizationError.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.PerformBulkMutateJob.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.PerformMutateJob.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.PromoteExperiment.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.SetAdParams.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.UpdateAd.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.UpdateAdGroup.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.UpdateAdGroupCriterion.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.UpdateCampaign.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\google.ads.adwords.examples.v201109.UpdateUserList.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_awapi.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_ExampleBase.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_Program.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_AddAdExtensionOverride.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_AddAdGroup.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_AddAdGroupCriteria.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_AddAds.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_AddCampaign.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_AddCampaignAdExtension.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_AddExperiment.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_AddKeywordsPerformanceReportDefinition.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_AddLogicalUserList.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_AddNegativeCampaignCriterion.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_AddSiteLinks.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_AddUserList.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_CheckCampaigns.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_DeleteAd.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_DeleteAdGroup.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_DeleteAdGroupCriterion.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_DeleteBulkMutateJob.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_DeleteCampaign.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_DeleteExperiment.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_DeleteSiteLinks.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_DeleteUserList.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_DownloadReport.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAccountHierarchy.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllAccountChanges.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllActiveAdGroupCriteria.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllAdExtensionOverrides.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllAdGroupCriteria.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllAdGroups.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllAds.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllBulkMutateJobs.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllCampaignAdExtensions.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllCampaigns.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllCampaignTargets.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllDisapprovedAds.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllExperiments.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllImages.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllNegativeCampaignCriteria.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllPausedCampaigns.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllReportDefinitions.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllUserLists.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetAllVideos.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetCampaign.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetCampaignAlerts.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetConversionOptimizerEligibility.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetCriterionBidLandscape.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetGeoLocationInfo.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetMethodCost.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetOperationCount.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetRelatedKeywords.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetRelatedPlacements.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetReportFields.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetTotalUsageUnitsPerMonth.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetTrafficEstimates.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_GetUnitCount.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_HandlePartialFailures.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_PerformBulkMutateJob.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_PromoteExperiment.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_SetAdParams.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_SetCampaignTargets.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_UpdateAd.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_UpdateAdGroup.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_UpdateAdGroupCriterion.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_UpdateCampaign.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201008_UpdateUserList.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_AddAdExtensionOverride.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_AddAdGroup.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_AddAdGroupCriteria.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_AddAds.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_AddCampaign.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_AddCampaignAdExtension.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_AddExperiment.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_AddKeywordsPerformanceReportDefinition.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_AddLogicalUserList.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_AddNegativeCampaignCriterion.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_AddSiteLinks.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_AddUserList.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_CheckCampaigns.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_DeleteAd.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_DeleteAdGroup.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_DeleteAdGroupCriterion.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_DeleteBulkMutateJob.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_DeleteCampaign.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_DeleteExperiment.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_DeleteSiteLinks.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_DeleteUserList.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_DownloadReport.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAccountHierarchy.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllAccountChanges.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllActiveAdGroupCriteria.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllAdExtensionOverrides.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllAdGroupCriteria.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllAdGroups.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllAds.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllBulkMutateJobs.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllCampaignAdExtensions.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllCampaigns.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllCampaignTargets.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllDisapprovedAds.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllExperiments.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllImages.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllNegativeCampaignCriteria.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllPausedCampaigns.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllReportDefinitions.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllUserLists.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetAllVideos.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetCampaign.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetCampaignAlerts.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetConversionOptimizerEligibility.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetCriterionBidLandscape.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetGeoLocationInfo.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetMethodCost.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetOperationCount.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetRelatedKeywords.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetRelatedPlacements.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetReportFields.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetTotalUsageUnitsPerMonth.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetTrafficEstimates.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_GetUnitCount.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_HandlePartialFailures.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_PerformBulkMutateJob.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_PromoteExperiment.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_SetAdParams.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_SetCampaignTargets.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_UpdateAd.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_UpdateAdGroup.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_UpdateAdGroupCriterion.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_UpdateCampaign.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201101_UpdateUserList.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_AddAdExtensionOverride.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_AddAdGroup.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_AddAdGroupCriteria.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_AddAds.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_AddCampaign.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_AddCampaignAdExtension.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_AddCampaignTargetingCriteria.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_AddExperiment.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_AddLogicalUserList.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_AddNegativeCampaignCriterion.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_AddSiteLinks.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_AddUserList.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_CheckCampaigns.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_DeleteAd.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_DeleteAdGroup.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_DeleteAdGroupCriterion.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_DeleteBulkMutateJob.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_DeleteCampaign.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_DeleteExperiment.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_DeleteSiteLinks.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_DeleteUserList.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_DownloadAdHocReport.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_DownloadReport.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAccountHierarchy.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllAccountChanges.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllActiveAdGroupCriteria.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllAdExtensionOverrides.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllAdGroupCriteria.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllAdGroups.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllAds.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllBulkMutateJobs.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllCampaignAdExtensions.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllCampaigns.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllCampaignTargets.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllCarriers.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllDisapprovedAds.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllExperiments.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllImages.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllLanguages.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllNegativeCampaignCriteria.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllPausedCampaigns.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllReportDefinitions.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllUserLists.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetAllVideos.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetCampaign.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetCampaignAlerts.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetClientCustomerId.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetConversionOptimizerEligibility.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetCriterionBidLandscape.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetGeoLocationInfo.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetLocationCriteria.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetMethodCost.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetOperationCount.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetRelatedKeywords.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetRelatedPlacements.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetReportFields.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetTotalUsageUnitsPerMonth.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetTrafficEstimates.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_GetUnitCount.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_HandlePartialFailures.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_HandleTwoFactorAuthorizationError.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_PerformBulkMutateJob.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_PerformMutateJob.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_PromoteExperiment.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_SetAdParams.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_UpdateAd.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_UpdateAdGroup.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_UpdateAdGroupCriterion.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_UpdateCampaign.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\src\js_adwordsapi_examples_google_ads_adwords_v201109_UpdateUserList.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\examples\symbols\_global_.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\files.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\index.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.adwords.ApiException.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.adwords.AppConfig.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.adwords.Exception.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.adwords.RequestHeader.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.adwords.ResponseHeader.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.adwords.Service.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.adwords.ServiceFactory.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.adwords.ServiceRegistry.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.adwords.ServiceSignature.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.adwords.SOAPHeaderServiceListener.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.adwords.User.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.common.AdsException.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.common.AdsUser.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.common.AppConfigBase.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.common.AuthToken.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.common.AuthTokenErrorCode.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.common.AuthTokenException.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.common.CommonErrorMessages.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.common.Service.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.common.ServiceFactory.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.common.ServiceRegistry.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.ads.common.ServiceSignature.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.core.ArgumentNullException.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.core.Exception.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.core.InvalidCastException.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.core.Runtime.getInstance.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.core.Runtime.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.net.HttpWebTransport.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.net.HttpWebTransportFactory.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.net.HttpWebTransportForExtensions.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.net.HttpWebTransportForGadgetsApi.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.net.HttpWebTransportForServerProxy.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.net.HttpWebTransportSettings.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.soap.Exception.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.soap.MethodSignature.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.soap.Nametable.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.soap.Object.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.soap.ObjectProperty.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.soap.ObjectType.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.soap.Service.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.soap.ServiceListener.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\google.system.soap.ServiceType.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_awapi.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_config.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_ApiException.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_AppConfig.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_Exception.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_RequestHeader.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_ResponseHeader.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_Service.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_ServiceFactory.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_ServiceRegistry.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_ServiceSignature.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_SOAPHeaderServiceListener.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_User.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_v201003_AdWordsApi.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_v201003_AdWordsServiceV201003.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_v201003_SoapNametable.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_v201008_AdWordsApi.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_v201008_AdWordsServiceV201008.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_v201008_SoapNametable.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_v201101_AdWordsApi.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_v201101_AdWordsServiceV201101.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_v201101_SoapNametable.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_v201109_AdWordsApi.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_v201109_AdWordsServiceV201109.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_adwordsapi_src_google_ads_adwords_v201109_SoapNametable.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_common_src_google_ads_common_AdsException.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_common_src_google_ads_common_AdsUser.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_common_src_google_ads_common_AppConfigBase.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_common_src_google_ads_common_AuthToken.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_common_src_google_ads_common_AuthTokenErrorCode.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_common_src_google_ads_common_AuthTokenException.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_common_src_google_ads_common_CommonErrorMessages.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_common_src_google_ads_common_Service.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_common_src_google_ads_common_ServiceFactory.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_common_src_google_ads_common_ServiceRegistry.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_common_src_google_ads_common_ServiceSignature.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_core_ArgumentNullException.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_core_Exception.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_core_InvalidCastException.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_core_Runtime.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_net_HttpWebTransport.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_net_HttpWebTransportFactory.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_net_HttpWebTransportForExtensions.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_net_HttpWebTransportForGadgetsApi.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_net_HttpWebTransportForServerProxy.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_net_HttpWebTransportSettings.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_soap_Exception.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_soap_MethodSignature.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_soap_Nametable.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_soap_Object.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_soap_ObjectProperty.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_soap_ObjectType.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_soap_Service.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_soap_ServiceListener.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\src\js_system_src_google_system_soap_ServiceType.js.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\docs\lib\symbols\_global_.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_diagonal-maze_20_6e4f1c_10x10.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_diagonal-maze_40_000000_10x10.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_fine-grain_10_eceadf_60x60.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_fine-grain_10_f8f7f6_60x60.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_fine-grain_15_eceadf_60x60.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_fine-grain_15_f7f3de_60x60.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_fine-grain_15_ffffff_60x60.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_fine-grain_65_654b24_60x60.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_fine-grain_68_b83400_60x60.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_flat_100_ffffff_40x100.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_flat_65_00592c_40x100.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_flat_75_00592c_40x100.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_flat_75_f3f3f3_40x100.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-icons_000000_256x240.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-icons_222222_256x240.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-icons_3572ac_256x240.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-icons_454545_256x240.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-icons_888888_256x240.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-icons_8c291d_256x240.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-icons_b83400_256x240.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-icons_fbdb93_256x240.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\jquery-ui\awapi-theme\jquery-ui-1.8.11.custom.css" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\css\main.css" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\images\application-default-icon-128-128.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\images\application-default-icon-16-16.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\images\application-default-icon-22-22.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\images\application-default-icon-48-48.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\images\loading.gif" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\js\awapi\awapi.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\js\awapi\v201008.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\js\extension\awapiloader.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\js\extension\extension.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\js\extension\settingsloader.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\js\extension\uimanager.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\options.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\popup.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\images\google-small.png" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\index.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\awapi.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\ExampleBase.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\Program.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\AddAdExtensionOverride.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\AddAdGroup.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\AddAdGroupCriteria.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\AddAds.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\AddCampaign.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\AddCampaignAdExtension.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\AddExperiment.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\AddKeywordsPerformanceReportDefinition.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\AddLogicalUserList.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\AddNegativeCampaignCriterion.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\AddSiteLinks.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\AddUserList.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\CheckCampaigns.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\DeleteAd.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\DeleteAdGroup.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\DeleteAdGroupCriterion.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\DeleteBulkMutateJob.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\DeleteCampaign.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\DeleteExperiment.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\DeleteSiteLinks.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\DeleteUserList.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\DownloadReport.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAccountHierarchy.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllAccountChanges.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllActiveAdGroupCriteria.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllAdExtensionOverrides.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllAdGroupCriteria.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllAdGroups.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllAds.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllBulkMutateJobs.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllCampaignAdExtensions.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllCampaigns.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllCampaignTargets.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllDisapprovedAds.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllExperiments.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllImages.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllNegativeCampaignCriteria.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllPausedCampaigns.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllReportDefinitions.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllUserLists.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetAllVideos.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetCampaign.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetCampaignAlerts.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetConversionOptimizerEligibility.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetCriterionBidLandscape.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetGeoLocationInfo.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetMethodCost.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetOperationCount.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetRelatedKeywords.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetRelatedPlacements.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetReportFields.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetTotalUsageUnitsPerMonth.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetTrafficEstimates.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\GetUnitCount.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\HandlePartialFailures.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\PerformBulkMutateJob.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\PromoteExperiment.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\SetAdParams.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\SetCampaignTargets.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\UpdateAd.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\UpdateAdGroup.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\UpdateAdGroupCriterion.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\UpdateCampaign.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201008\UpdateUserList.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\AddAdExtensionOverride.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\AddAdGroup.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\AddAdGroupCriteria.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\AddAds.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\AddCampaign.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\AddCampaignAdExtension.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\AddExperiment.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\AddKeywordsPerformanceReportDefinition.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\AddLogicalUserList.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\AddNegativeCampaignCriterion.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\AddSiteLinks.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\AddUserList.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\CheckCampaigns.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\DeleteAd.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\DeleteAdGroup.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\DeleteAdGroupCriterion.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\DeleteBulkMutateJob.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\DeleteCampaign.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\DeleteExperiment.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\DeleteSiteLinks.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\DeleteUserList.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\DownloadReport.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAccountHierarchy.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllAccountChanges.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllActiveAdGroupCriteria.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllAdExtensionOverrides.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllAdGroupCriteria.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllAdGroups.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllAds.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllBulkMutateJobs.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllCampaignAdExtensions.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllCampaigns.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllCampaignTargets.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllDisapprovedAds.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllExperiments.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllImages.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllNegativeCampaignCriteria.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllPausedCampaigns.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllReportDefinitions.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllUserLists.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetAllVideos.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetCampaign.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetCampaignAlerts.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetConversionOptimizerEligibility.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetCriterionBidLandscape.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetGeoLocationInfo.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetMethodCost.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetOperationCount.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetRelatedKeywords.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetRelatedPlacements.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetReportFields.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetTotalUsageUnitsPerMonth.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetTrafficEstimates.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\GetUnitCount.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\HandlePartialFailures.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\PerformBulkMutateJob.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\PromoteExperiment.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\SetAdParams.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\SetCampaignTargets.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\UpdateAd.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\UpdateAdGroup.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\UpdateAdGroupCriterion.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\UpdateCampaign.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201101\UpdateUserList.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\AddAdExtensionOverride.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\AddAdGroup.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\AddAdGroupCriteria.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\AddAds.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\AddCampaign.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\AddCampaignAdExtension.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\AddCampaignTargetingCriteria.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\AddExperiment.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\AddLogicalUserList.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\AddNegativeCampaignCriterion.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\AddSiteLinks.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\AddUserList.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\CheckCampaigns.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\DeleteAd.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\DeleteAdGroup.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\DeleteAdGroupCriterion.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\DeleteBulkMutateJob.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\DeleteCampaign.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\DeleteExperiment.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\DeleteSiteLinks.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\DeleteUserList.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\DownloadAdHocReport.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\DownloadReport.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAccountHierarchy.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllAccountChanges.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllActiveAdGroupCriteria.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllAdExtensionOverrides.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllAdGroupCriteria.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllAdGroups.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllAds.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllBulkMutateJobs.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllCampaignAdExtensions.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllCampaigns.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllCampaignTargets.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllCarriers.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllDisapprovedAds.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllExperiments.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllImages.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllLanguages.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllNegativeCampaignCriteria.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllPausedCampaigns.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllReportDefinitions.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllUserLists.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetAllVideos.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetCampaign.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetCampaignAlerts.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetClientCustomerId.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetConversionOptimizerEligibility.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetCriterionBidLandscape.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetGeoLocationInfo.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetLocationCriteria.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetMethodCost.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetOperationCount.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetRelatedKeywords.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetRelatedPlacements.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetReportFields.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetTotalUsageUnitsPerMonth.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetTrafficEstimates.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\GetUnitCount.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\HandlePartialFailures.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\HandleTwoFactorAuthorizationError.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\PerformBulkMutateJob.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\PerformMutateJob.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\PromoteExperiment.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\SetAdParams.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\UpdateAd.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\UpdateAdGroup.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\UpdateAdGroupCriterion.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\UpdateCampaign.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\examples\google\ads\adwords\v201109\UpdateUserList.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\awapi.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\config.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\ApiException.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\ApiException_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\AppConfig.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\AppConfig_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\Exception.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\Exception_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\RequestHeader.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\RequestHeader_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\ResponseHeader.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\ResponseHeader_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\Service.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\ServiceFactory.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\ServiceRegistry.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\ServiceRegistry_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\ServiceSignature.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\ServiceSignature_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\SOAPHeaderServiceListener.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\User.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\v201003\AdWordsApi.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\v201003\AdWordsServiceV201003.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\v201003\SoapNametable.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\v201008\AdWordsApi.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\v201008\AdWordsServiceV201008.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\v201008\SoapNametable.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\v201101\AdWordsApi.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\v201101\AdWordsServiceV201101.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\v201101\SoapNametable.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\v201109\AdWordsApi.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\v201109\AdWordsServiceV201109.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\adwordsapi\src\google\ads\adwords\v201109\SoapNametable.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\AdsException.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\AdsException_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\AdsUser.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\AdsUser_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\AppConfigBase.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\AppConfigBase_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\AuthToken.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\AuthTokenErrorCode.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\AuthTokenException.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\AuthTokenException_test.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\AuthToken_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\CommonErrorMessages.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\Service.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\ServiceFactory.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\ServiceFactory_test.html" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\ServiceRegistry.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\ServiceRegistry_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\ServiceSignature.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\ServiceSignature_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\common\src\google\ads\common\Service_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\compiled\awapi.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\compiled\config.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\compiled\index.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\compiled\v201003.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\compiled\v201008.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\compiled\v201101.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\compiled\v201109.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\core\ArgumentNullException.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\core\ArgumentNullException_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\core\Exception.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\core\Exception_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\core\InvalidCastException.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\core\InvalidCastException_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\core\Runtime.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\core\Runtime_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\net\HttpWebTransport.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\net\HttpWebTransportFactory.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\net\HttpWebTransportFactory_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\net\HttpWebTransportForExtensions.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\net\HttpWebTransportForExtensions_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\net\HttpWebTransportForGadgetsApi.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\net\HttpWebTransportForGadgetsApi_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\net\HttpWebTransportForServerProxy.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\net\HttpWebTransportForServerProxy_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\net\HttpWebTransportSettings.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\net\HttpWebTransportSettings_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\net\HttpWebTransport_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\Exception.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\Exception_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\MethodSignature.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\MethodSignature_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\Nametable.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\Nametable_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\Object.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\ObjectProperty.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\ObjectProperty_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\ObjectType.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\ObjectType_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\Object_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\Service.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\ServiceListener.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\ServiceListener_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\ServiceType.js" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\ServiceType_test.htm" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\soap\Service_test.htm" />
+    <Content Include="theater.aspx" />
+    <Content Include="dataFiles\joinMailingList.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Inventory\Default.aspx" />
+    <Content Include="assets\Scripts\scripts.js" />
+    <Content Include="assets\Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="assets\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="assets\Scripts\jquery-1.4.1.js" />
+    <Content Include="assets\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="assets\Styles\stylesheet-plugins.css" />
+    <Content Include="assets\Styles\venueMapStyles.css" />
+    <Content Include="Inventory\InventoryUploadSuccess.aspx" />
+    <Content Include="ResultsGeneral.aspx" />
+    <Content Include="sports.aspx" />
+    <Content Include="tickets\advancedSearch.aspx" />
+    <Content Include="tickets\requestTickets.aspx" />
+    <Content Include="tickets\ResultsGeneralAtVenue.aspx" />
+    <Content Include="tickets\ResultsEventAtVenue.aspx" />
+    <Content Include="tickets\siteMaintenance.aspx" />
+    <Content Include="tickets\subcategories.aspx" />
+    <Content Include="tickets\ResultsDate.aspx" />
+    <Content Include="tickets\ResultsEmpty.aspx" />
+    <Content Include="tickets\category.aspx" />
+    <Content Include="tickets\city.aspx" />
+    <Content Include="tickets\ResultsTicket.aspx" />
+    <Content Include="tickets\ticketRequestSuccess.aspx" />
+    <Content Include="tickets\venue.aspx" />
+    <Content Include="tickets\event.aspx" />
+    <Content Include="tickets\search.aspx" />
+    <Content Include="tickets\tn_images\tn_box_bottom.gif" />
+    <Content Include="tickets\tn_images\tn_box_bottomleft.gif" />
+    <Content Include="tickets\tn_images\tn_box_bottomright.gif" />
+    <Content Include="tickets\tn_images\tn_box_left.gif" />
+    <Content Include="tickets\tn_images\tn_box_right.gif" />
+    <Content Include="tickets\tn_images\tn_box_top.gif" />
+    <Content Include="tickets\tn_images\tn_box_topleft.gif" />
+    <Content Include="tickets\tn_images\tn_box_topright.gif" />
+    <Content Include="tickets\tn_images\tn_results_highlight_off.gif" />
+    <Content Include="tickets\tn_images\tn_results_highlight_on.gif" />
+    <Content Include="tickets\tn_images\tn_results_sort_asc.gif" />
+    <Content Include="tickets\tn_images\tn_results_sort_desc.gif" />
+    <Content Include="tickets\tn_images\tn_results_venuemap.gif" />
+    <Content Include="tickets\tn_images\tn_selevents_feature_large_buynow.gif" />
+    <Content Include="tickets\tn_images\tn_selevents_feature_large_title.gif" />
+    <Content Include="tickets\tn_images\tn_selevents_list_bullet.gif" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Service References\TNWebService\RockstarSeating.TNWebService.Category.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebService\RockstarSeating.TNWebService.Country.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebService\RockstarSeating.TNWebService.Event.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebService\RockstarSeating.TNWebService.EventPerformer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebService\RockstarSeating.TNWebService.Performer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebService\RockstarSeating.TNWebService.PerformerPercent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebService\RockstarSeating.TNWebService.PricingInformation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebService\RockstarSeating.TNWebService.States.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebService\RockstarSeating.TNWebService.TicketGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebService\RockstarSeating.TNWebService.Venue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TNWebService\RockstarSeating.TNWebService.VenueConfiguration.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\myAccount.aspx.cs">
+      <DependentUpon>myAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\myAccount.aspx.designer.cs">
+      <DependentUpon>myAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterSuccess.aspx.cs">
+      <DependentUpon>RegisterSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterSuccess.aspx.designer.cs">
+      <DependentUpon>RegisterSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RequestConsignorStatus.aspx.cs">
+      <DependentUpon>RequestConsignorStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RequestConsignorStatus.aspx.designer.cs">
+      <DependentUpon>RequestConsignorStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\approveConsignor.aspx.cs">
+      <DependentUpon>approveConsignor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\approveConsignor.aspx.designer.cs">
+      <DependentUpon>approveConsignor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Testimonials.aspx.cs">
+      <DependentUpon>Testimonials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Testimonials.aspx.designer.cs">
+      <DependentUpon>Testimonials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="baseClasses\BaseMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="content\contactus.aspx.cs">
+      <DependentUpon>contactus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="content\contactus.aspx.designer.cs">
+      <DependentUpon>contactus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="content\cvv2.aspx.cs">
+      <DependentUpon>cvv2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="content\cvv2.aspx.designer.cs">
+      <DependentUpon>cvv2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="content\generalError.aspx.cs">
+      <DependentUpon>generalError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="content\generalError.aspx.designer.cs">
+      <DependentUpon>generalError.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="content\policies.aspx.cs">
+      <DependentUpon>policies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="content\policies.aspx.designer.cs">
+      <DependentUpon>policies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="broadway.aspx.cs">
+      <DependentUpon>broadway.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="broadway.aspx.designer.cs">
+      <DependentUpon>broadway.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="concerts.aspx.cs">
+      <DependentUpon>concerts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="concerts.aspx.designer.cs">
+      <DependentUpon>concerts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="content\widgets\footer.ascx.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="content\widgets\footer.ascx.designer.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="content\widgets\header.ascx.cs">
+      <DependentUpon>header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="content\widgets\header.ascx.designer.cs">
+      <DependentUpon>header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="content\widgets\leftNav.ascx.cs">
+      <DependentUpon>leftNav.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="content\widgets\leftNav.ascx.designer.cs">
+      <DependentUpon>leftNav.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="content\widgets\rightSidebar.ascx.cs">
+      <DependentUpon>rightSidebar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="content\widgets\rightSidebar.ascx.designer.cs">
+      <DependentUpon>rightSidebar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="content\widgets\siteTopBar.ascx.cs">
+      <DependentUpon>siteTopBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="content\widgets\siteTopBar.ascx.designer.cs">
+      <DependentUpon>siteTopBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="dataFiles\TestimonialsObj.cs" />
+    <Compile Include="Sandbox\sandbox1.aspx.cs">
+      <DependentUpon>sandbox1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sandbox\sandbox1.aspx.designer.cs">
+      <DependentUpon>sandbox1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TNWebSvc_StringInputs\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\TNWebSvcs\GetHighSalesPerformers.cs" />
+    <Compile Include="Utils\TNWebSvcs\GetEventObj.cs" />
+    <Compile Include="dataFiles\StubHubs_MetroArea_Tree.aspx.cs">
+      <DependentUpon>StubHubs_MetroArea_Tree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dataFiles\StubHubs_MetroArea_Tree.aspx.designer.cs">
+      <DependentUpon>StubHubs_MetroArea_Tree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="friends.aspx.cs">
+      <DependentUpon>friends.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="friends.aspx.designer.cs">
+      <DependentUpon>friends.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lasvegas.aspx.cs">
+      <DependentUpon>lasvegas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lasvegas.aspx.designer.cs">
+      <DependentUpon>lasvegas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\TNWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="tickets\geoLocator.aspx.cs">
+      <DependentUpon>geoLocator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tickets\geoLocator.aspx.designer.cs">
+      <DependentUpon>geoLocator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="theater.aspx.cs">
+      <DependentUpon>theater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="theater.aspx.designer.cs">
+      <DependentUpon>theater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dataFiles\joinMailingList.aspx.cs">
+      <DependentUpon>joinMailingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dataFiles\joinMailingList.aspx.designer.cs">
+      <DependentUpon>joinMailingList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dataFiles\UserObj.cs" />
+    <Compile Include="dataFiles\mySqlConnector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryUploadSuccess.aspx.cs">
+      <DependentUpon>InventoryUploadSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryUploadSuccess.aspx.designer.cs">
+      <DependentUpon>InventoryUploadSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultsGeneral.aspx.cs">
+      <DependentUpon>ResultsGeneral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResultsGeneral.aspx.designer.cs">
+      <DependentUpon>ResultsGeneral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="sports.aspx.cs">
+      <DependentUpon>sports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sports.aspx.designer.cs">
+      <DependentUpon>sports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tickets\advancedSearch.aspx.cs">
+      <DependentUpon>advancedSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tickets\advancedSearch.aspx.designer.cs">
+      <DependentUpon>advancedSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tickets\requestTickets.aspx.cs">
+      <DependentUpon>requestTickets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tickets\requestTickets.aspx.designer.cs">
+      <DependentUpon>requestTickets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tickets\ResultsGeneralAtVenue.aspx.cs">
+      <DependentUpon>ResultsGeneralAtVenue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tickets\ResultsGeneralAtVenue.aspx.designer.cs">
+      <DependentUpon>ResultsGeneralAtVenue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tickets\ResultsEventAtVenue.aspx.cs">
+      <DependentUpon>ResultsEventAtVenue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tickets\ResultsEventAtVenue.aspx.designer.cs">
+      <DependentUpon>ResultsEventAtVenue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tickets\siteMaintenance.aspx.cs">
+      <DependentUpon>siteMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tickets\siteMaintenance.aspx.designer.cs">
+      <DependentUpon>siteMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tickets\subcategories.aspx.cs">
+      <DependentUpon>subcategories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tickets\subcategories.aspx.designer.cs">
+      <DependentUpon>subcategories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tickets\ResultsDate.aspx.cs">
+      <DependentUpon>ResultsDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tickets\ResultsDate.aspx.designer.cs">
+      <DependentUpon>ResultsDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tickets\ResultsEmpty.aspx.cs">
+      <DependentUpon>ResultsEmpty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tickets\ResultsEmpty.aspx.designer.cs">
+      <DependentUpon>ResultsEmpty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tickets\category.aspx.cs">
+      <DependentUpon>category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tickets\category.aspx.designer.cs">
+      <DependentUpon>category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tickets\city.aspx.cs">
+      <DependentUpon>city.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tickets\city.aspx.designer.cs">
+      <DependentUpon>city.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tickets\ResultsTicket.aspx.cs">
+      <DependentUpon>ResultsTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tickets\ResultsTicket.aspx.designer.cs">
+      <DependentUpon>ResultsTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tickets\ticketRequestSuccess.aspx.cs">
+      <DependentUpon>ticketRequestSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tickets\ticketRequestSuccess.aspx.designer.cs">
+      <DependentUpon>ticketRequestSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tickets\venue.aspx.cs">
+      <DependentUpon>venue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tickets\venue.aspx.designer.cs">
+      <DependentUpon>venue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tickets\event.aspx.cs">
+      <DependentUpon>event.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tickets\event.aspx.designer.cs">
+      <DependentUpon>event.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tickets\search.aspx.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tickets\search.aspx.designer.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\cdontsUtil.cs" />
+    <Compile Include="Utils\csvExporter.cs" />
+    <Compile Include="Utils\india.cs" />
+    <Compile Include="Utils\Password.cs" />
+    <Compile Include="Utils\Salt.cs" />
+    <Compile Include="Utils\SaltUtil.cs" />
+    <Compile Include="Utils\TestApplication.cs" />
+    <Compile Include="Utils\TNWebSvcs\GetWebService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{B691E011-1797-432E-907A-4D8C69339129}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="CDO">
+      <Guid>{CD000000-8B95-11D1-82DB-00C04FB1625D}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sandbox\google-api-adwords-js-v1.1.0\Changes" />
+    <None Include="Sandbox\google-api-adwords-js-v1.1.0\COPYING" />
+    <None Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\bin\build.sh" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\js\jquery-ui.zip" />
+    <None Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\manifest.json" />
+    <None Include="Sandbox\google-api-adwords-js-v1.1.0\extensions\object-stats\README" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\js\closure.zip" />
+    <None Include="Sandbox\google-api-adwords-js-v1.1.0\js\compiled\README" />
+    <None Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\net\HttpWebTransportForServerProxy.jsback" />
+    <None Include="Sandbox\google-api-adwords-js-v1.1.0\js\system\src\google\system\net\XhrIo.jsback" />
+    <None Include="Sandbox\google-api-adwords-js-v1.1.0\proxy.php" />
+    <None Include="Sandbox\google-api-adwords-js-v1.1.0\README" />
+    <None Include="Sandbox\google-api-adwords-js-v1.1.0\tools\scripts\build.bat" />
+    <None Include="Sandbox\google-api-adwords-js-v1.1.0\tools\scripts\build.sh" />
+    <None Include="Sandbox\google-api-adwords-js-v1.1.0\tools\scripts\replace.py" />
+    <Content Include="Sandbox\google-api-adwords-js-v1.1.0\tools\third_party\jsdoc.zip" />
+    <None Include="Service References\TNWebService\tnwebservice.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\TNWebSvc_StringInputs\" />
+    <WCFMetadataStorage Include="Service References\TNWebService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49494</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/RockstarSeating</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

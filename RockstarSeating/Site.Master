@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="RockstarSeating.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<%@ Register TagPrefix="rockstar" TagName="header" Src="~/content/widgets/header.ascx" %>
+<%@ Register TagPrefix="rockstar" TagName="siteTopBar" Src="~/content/widgets/siteTopBar.ascx" %>
+<%@ Register TagPrefix="rockstar" TagName="leftNav" Src="~/content/widgets/leftNav.ascx" %>
+<%@ Register TagPrefix="rockstar" TagName="rightSidebar" Src="~/content/widgets/rightSidebar.ascx" %>
+<%@ Register TagPrefix="rockstar" TagName="footer" Src="~/content/widgets/footer.ascx" %>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+	<title>Rockstar Seating</title>
+	<meta name="keywords" content="Seattle concerts, Seattle shows, concerts, theater, theatre, Seattle Rock concerts, Seattle pop concerts, Seattle comedy shows, Seattle comedy, Seattle live performances, Seattle live shows" />
+	<meta name="description" content="Premier seating to sold out Seattle &amp; nationwide concerts!" />
+	<script type="text/javascript" src='<%= ResolveClientUrl("~/assets/Scripts/jquery-1.6.2.min.js")%>'></script>
+	<script type="text/javascript" src='<%= ResolveClientUrl("~/assets/Scripts/jquery-ui-1.8.15.custom.min.js")%>'></script>
+	<script type="text/javascript" src="<%= ResolveClientUrl("~/assets/Scripts/scripts.js") %>"></script>
+	
+<%--	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&amp;region=US"></script>
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript"src="<%= ResolveClientUrl("~/assets/Scripts/gears_init.js") %>"></script>--%>
+
+	<script type="text/javascript">
+		var baseURL = "<%:HttpContext.Current.Request.ApplicationPath %>";	
+	</script>
+
+	<link rel="stylesheet" href="~/assets/Styles/Site.css" type="text/css" />
+	<link rel="Stylesheet" type="text/css" href="<%= ResolveClientUrl("~/assets/Styles/stylesheet-plugins.css") %>" />
+	<link rel="Stylesheet" type="text/css" href="<%= ResolveClientUrl("~/assets/Styles/venueMapStyles.css") %>" />
+	<link rel="Stylesheet" type="text/css" href="<%= ResolveClientUrl("~/assets/Styles/ui-lightness/jquery-ui-1.8.15.custom.css") %>" />
+	<link rel="icon" type="image/ico" href="favicon.ico" />
+	<link rel="shortcut icon" href="favicon.ico" />
+
+	<link rel="image_src" href="http://www.rockstarseating.com/assets/img/hdrLogo.png" />
+
+
+	<asp:ContentPlaceHolder ID="HeadContent" runat="server">
+	</asp:ContentPlaceHolder>
+
+
+</head>
+<body>
+
+	<rockstar:siteTopBar id="siteTopBarControl" runat="server"/>
+	
+	<div id="page">
+
+		<rockstar:header id="headerControl" runat="server"/>		
+		
+		<div id="main">
+
+			<rockstar:leftNav id="leftNavControl" runat="server"/>
+
+			<form runat="server" id="mainForm">
+				<div id="content">
+					<asp:ContentPlaceHolder ID="MainContent" runat="server" />
+				</div>
+			</form>
+
+			<rockstar:rightSidebar ID="rightSidebarControl" runat="server" />
+		
+		</div>
+
+	</div>
+
+	<rockstar:footer ID="footerControl" runat="server" />
+
+	
+	<script type="text/javascript">
+	    var dUrl = document.location.href;
+	    dUrl = dUrl.toLowerCase();
+
+		var appPath = "<%:HttpContext.Current.Request.ApplicationPath %>";
+		if (appPath.length == 1) {
+			appPath = "";
+		}
+
+		buildNavigationMenus(appPath);
+
+		$('#hdrSrchBtn', '#searchBoxWrapper').click(function () {
+			searchFrmSubmit();
+		});
+
+	</script>
+</body>
+</html>

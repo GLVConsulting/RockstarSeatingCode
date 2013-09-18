@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<navigationMenu>
+	<topNav>
+		<menuItem url="/Default.aspx" id="home">Home</menuItem>
+		<menuItem url="http://rockstarseating.com/tickets/search.aspx?kwds=seattle%20concerts">Concerts</menuItem>
+		<menuItem id="3">Theatre</menuItem>
+		<menuItem id="2_24">Comedy</menuItem>
+		<menuItem id="3_35">Las Vegas</menuItem>
+		<menuItem id="3_70">Broadway</menuItem>
+		<menuItem id="1">Sports</menuItem>
+	</topNav>
+	<leftNav>
+		<navItem>
+			<menuHdr url="2" id="hotConcerts">UPCOMING CONCERTS</menuHdr>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=David+Garrett&amp;pid=27277">David Garrett</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/ResultsTicket.aspx?evtid=1700098&amp;event=Watch+The+Throne+Tour%3a+Jay-Z+%26+Kanye+West">Jay-Z and Kanye West: Watch the Throne Tour</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Back+To+Bass+Tour&amp;pid=50492">Sting: Back to Bass Tour</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Woody+Allen+And+His+New+Orleans+Jazz+Band&amp;pid=16916">Woody Allen and his New Orleans Jazz Band</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Roger+Daltrey&amp;pid=36000">Roger Daltrey</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Joe+Bonamassa&amp;pid=4266">Joe Bonamassa</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Willie+Nelson&amp;pid=1148">Willie Nelson</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Feist&amp;pid=5095">Feist</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Jeff+Beck&amp;pid=5565">Jeff Beck</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Tori+Amos&amp;pid=1076">Tori Amos</menuItem>
+		</navItem>
+		<navItem>
+			<menuHdr id="3">THEATER</menuHdr>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Wicked&amp;pid=1145">Wicked</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Beauty+and+the+Beast&amp;pid=101">Disneys Beauty and the Beast</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Blue+Man+Group&amp;pid=131">Blue Man Group</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Lion+King&amp;pid=3160">Lion King</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Les+Miserables&amp;pid=564">Les Miserables</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=American+Idiot&amp;pid=33227">American Idiot</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=West+Side+Story&amp;pid=1359">West Side Story</menuItem>
+		</navItem>
+		<navItem>
+			<menuHdr id="2_24">COMEDY</menuHdr>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Adam+Carolla&amp;pid=41808">Adam Carolla</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Ron+White&amp;pid=881">Ron White</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Anjelah+Johnson&amp;pid=33546">Anjelah Johnson</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Jo+Koy&amp;pid=31393">Jo Koy</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Kathy+Griffin&amp;pid=3164">Kathy Griffin</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Jerry+Seinfeld&amp;pid=1179">Jerry Seinfeld</menuItem>
+			<menuItem url="http://rockstarseating.com/tickets/event.aspx?event=Jim+Gaffigan&amp;pid=5300">Jim Gaffigan</menuItem>
+		</navItem>
+		<navItem>
+			<menuHdr id="1">SPORTS</menuHdr>
+			<menuItem>MLB Baseball</menuItem>
+			<menuItem>NFL Football</menuItem>
+			<menuItem>NHL Hockey</menuItem>
+			<menuItem>NBA Basketball</menuItem>
+			<menuItem>UFC</menuItem>
+			<menuItem>Nascar</menuItem>
+			<menuItem>Boxing</menuItem>
+		</navItem>
+	</leftNav>
+</navigationMenu>

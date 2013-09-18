@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="joinMailingList.aspx.cs" Inherits="RockstarSeating.dataFiles.joinMailingList" %>

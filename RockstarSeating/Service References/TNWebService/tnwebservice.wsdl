@@ -1,0 +1,1496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1">
+      <s:element name="GetEvents">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="numberOfEvents" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="eventID" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="eventName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="eventDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="beginDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="venueID" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="venueName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stateProvDesc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="stateID" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cityZip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nearZip" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="parentCategoryID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="childCategoryID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="grandchildCategoryID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="performerID" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="performerName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="noPerformers" nillable="true" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="lowPrice" nillable="true" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="highPrice" nillable="true" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="modificationDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="onlyMine" nillable="true" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="whereClause" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderByClause" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEventsResult" type="tns:ArrayOfEvent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEvent">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Event" nillable="true" type="tns:Event" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Event">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ChildCategoryID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Clicks" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GrandchildCategoryID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsWomensEvent" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="MapURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ParentCategoryID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StateProvince" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StateProvinceID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Venue" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="VenueConfigurationID" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VenueID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CountryID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTickets">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="numberOfRecords" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="eventID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lowPrice" nillable="true" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="highPrice" nillable="true" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ticketGroupID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="requestedTixSplit" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="whereClause" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderByClause" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTicketsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTicketsResult" type="tns:ArrayOfTicketGroup" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTicketGroup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TicketGroup" nillable="true" type="tns:TicketGroup" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TicketGroup">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EventID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FacePrice" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="HighSeat" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsMine" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="LowSeat" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Marked" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ParentCategoryID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Rating" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="RatingDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RetailPrice" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Row" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TicketQuantity" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ValidSplits" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="TicketGroupType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="currencyTypeAbbr" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="convertedActualPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ActualPrice" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Section" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WholesalePrice" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCategories">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoriesResult" type="tns:ArrayOfCategory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCategory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Category" nillable="true" type="tns:Category" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Category">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ChildCategoryDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChildCategoryID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GrandchildCategoryDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GrandchildCategoryID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParentCategoryDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ParentCategoryID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCategoriesMasterList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoriesMasterListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoriesMasterListResult" type="tns:ArrayOfCategory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountries">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountriesResult" type="tns:ArrayOfCountry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCountry">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Country" nillable="true" type="tns:Country" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Country">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Abbreviation" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="InternationalPhoneCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyTypeDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyTypeAbbr" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConversionToUSD" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConversionFromUSD" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCountryByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="countryID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCountryByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCountryByIDResult" type="tns:Country" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventPerformers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventPerformersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEventPerformersResult" type="tns:ArrayOfEventPerformer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEventPerformer">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EventPerformer" nillable="true" type="tns:EventPerformer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EventPerformer">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EventID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PerformerID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PerformerName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPerformerByCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="parentCategoryID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="childCategoryID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="grandchildCategoryID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="hasEvent" nillable="true" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPerformerByCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPerformerByCategoryResult" type="tns:ArrayOfPerformer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPerformer">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Performer" nillable="true" type="tns:Performer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Performer">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Category" type="tns:Category" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HomeVenueID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSublevelCategories">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="parentCategoryID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="childCategoryID" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSublevelCategoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSublevelCategoriesResult" type="tns:ArrayOfCategory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVenue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="venueID" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVenueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVenueResult" type="tns:ArrayOfVenue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfVenue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Venue" nillable="true" type="tns:Venue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Venue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BoxOfficePhone" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Capacity" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChildRules" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Directions" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Notes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberOfConfigurations" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Parking" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PublicTransportation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Rules" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StateProvince" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Street2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WillCall" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZipCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetVenueConfigurations">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="venueID" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVenueConfigurationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVenueConfigurationsResult" type="tns:ArrayOfVenueConfiguration" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfVenueConfiguration">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="VenueConfiguration" nillable="true" type="tns:VenueConfiguration" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VenueConfiguration">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Capacity" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MapSite" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MapURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="VenueID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetHighInventoryPerformers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="numReturned" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="parentCategoryID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="childCategoryID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="grandchildCategoryID" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHighInventoryPerformersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHighInventoryPerformersResult" type="tns:ArrayOfPerformerPercent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPerformerPercent">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PerformerPercent" nillable="true" type="tns:PerformerPercent" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PerformerPercent">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Percent" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Category" type="tns:Category" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetHighSalesPerformers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="numReturned" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="parentCategoryID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="childCategoryID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="grandchildCategoryID" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHighSalesPerformersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHighSalesPerformersResult" type="tns:ArrayOfPerformerPercent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchEvents">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="searchTerms" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="whereClause" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderByClause" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchEventsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchEventsResult" type="tns:ArrayOfEvent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStates">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="countryID" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStatesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStatesResult" type="tns:ArrayOfStates" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStates">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="States" nillable="true" type="tns:States" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="States">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StateProvinceShortDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StateProvinceLongDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StateProvinceID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CountryDesc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPricingInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="eventID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPricingInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPricingInfoResult" type="tns:PricingInformation" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PricingInformation">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ticketsAvailable" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="highPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="lowPrice" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="weightedAvgPrice" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="eventName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SearchPerformers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="searchTerms" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="whereClause" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderByClause" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchPerformersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchPerformersResult" type="tns:ArrayOfPerformer" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPerformerByCategoryCompressed">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="parentCategoryID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="childCategoryID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="grandchildCategoryID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="hasEvent" nillable="true" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPerformerByCategoryCompressedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPerformerByCategoryCompressedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventsCompressed">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="numberOfEvents" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="eventID" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="eventName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="eventDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="beginDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="venueID" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="venueName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stateProvDesc" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="stateID" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cityZip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nearZip" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="parentCategoryID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="childCategoryID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="grandchildCategoryID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="performerID" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="performerName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="noPerformers" nillable="true" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="lowPrice" nillable="true" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="highPrice" nillable="true" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="modificationDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="onlyMine" nillable="true" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="whereClause" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderByClause" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventsCompressedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEventsCompressedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTicketsCompressed">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="websiteConfigID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="numberOfRecords" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="eventID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="lowPrice" nillable="true" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="highPrice" nillable="true" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="ticketGroupID" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="requestedTixSplit" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="whereClause" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="orderByClause" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTicketsCompressedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTicketsCompressedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfCategory" nillable="true" type="tns:ArrayOfCategory" />
+      <s:element name="ArrayOfCountry" nillable="true" type="tns:ArrayOfCountry" />
+      <s:element name="Country" nillable="true" type="tns:Country" />
+      <s:element name="ArrayOfEventPerformer" nillable="true" type="tns:ArrayOfEventPerformer" />
+      <s:element name="ArrayOfEvent" nillable="true" type="tns:ArrayOfEvent" />
+      <s:element name="PricingInformation" nillable="true" type="tns:PricingInformation" />
+      <s:element name="ArrayOfPerformer" nillable="true" type="tns:ArrayOfPerformer" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetEventsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEvents" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTickets" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTicketsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategories" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesMasterListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategoriesMasterList" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesMasterListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategoriesMasterListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCountries" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCountryByID" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCountryByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEventPerformersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEventPerformers" />
+  </wsdl:message>
+  <wsdl:message name="GetEventPerformersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEventPerformersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPerformerByCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetPerformerByCategory" />
+  </wsdl:message>
+  <wsdl:message name="GetPerformerByCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetPerformerByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSublevelCategoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSublevelCategories" />
+  </wsdl:message>
+  <wsdl:message name="GetSublevelCategoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSublevelCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVenueSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVenue" />
+  </wsdl:message>
+  <wsdl:message name="GetVenueSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVenueResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVenueConfigurationsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVenueConfigurations" />
+  </wsdl:message>
+  <wsdl:message name="GetVenueConfigurationsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVenueConfigurationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHighInventoryPerformersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHighInventoryPerformers" />
+  </wsdl:message>
+  <wsdl:message name="GetHighInventoryPerformersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHighInventoryPerformersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHighSalesPerformersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHighSalesPerformers" />
+  </wsdl:message>
+  <wsdl:message name="GetHighSalesPerformersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHighSalesPerformersResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchEventsSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchEvents" />
+  </wsdl:message>
+  <wsdl:message name="SearchEventsSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStatesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStates" />
+  </wsdl:message>
+  <wsdl:message name="GetStatesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPricingInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPricingInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPricingInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPricingInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchPerformersSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchPerformers" />
+  </wsdl:message>
+  <wsdl:message name="SearchPerformersSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchPerformersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPerformerByCategoryCompressedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPerformerByCategoryCompressed" />
+  </wsdl:message>
+  <wsdl:message name="GetPerformerByCategoryCompressedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPerformerByCategoryCompressedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsCompressedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEventsCompressed" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsCompressedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEventsCompressedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketsCompressedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTicketsCompressed" />
+  </wsdl:message>
+  <wsdl:message name="GetTicketsCompressedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTicketsCompressedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesHttpGetIn">
+    <wsdl:part name="websiteConfigID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCategory" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesMasterListHttpGetIn">
+    <wsdl:part name="websiteConfigID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesMasterListHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCategory" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesHttpGetIn">
+    <wsdl:part name="websiteConfigID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCountry" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByIDHttpGetIn">
+    <wsdl:part name="websiteConfigID" type="s:string" />
+    <wsdl:part name="countryID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:Country" />
+  </wsdl:message>
+  <wsdl:message name="GetEventPerformersHttpGetIn">
+    <wsdl:part name="websiteConfigID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEventPerformersHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfEventPerformer" />
+  </wsdl:message>
+  <wsdl:message name="SearchEventsHttpGetIn">
+    <wsdl:part name="websiteConfigID" type="s:string" />
+    <wsdl:part name="searchTerms" type="s:string" />
+    <wsdl:part name="whereClause" type="s:string" />
+    <wsdl:part name="orderByClause" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchEventsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfEvent" />
+  </wsdl:message>
+  <wsdl:message name="GetPricingInfoHttpGetIn">
+    <wsdl:part name="websiteConfigID" type="s:string" />
+    <wsdl:part name="eventID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPricingInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:PricingInformation" />
+  </wsdl:message>
+  <wsdl:message name="SearchPerformersHttpGetIn">
+    <wsdl:part name="websiteConfigID" type="s:string" />
+    <wsdl:part name="searchTerms" type="s:string" />
+    <wsdl:part name="whereClause" type="s:string" />
+    <wsdl:part name="orderByClause" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchPerformersHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfPerformer" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesHttpPostIn">
+    <wsdl:part name="websiteConfigID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCategory" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesMasterListHttpPostIn">
+    <wsdl:part name="websiteConfigID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoriesMasterListHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCategory" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesHttpPostIn">
+    <wsdl:part name="websiteConfigID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCountriesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCountry" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByIDHttpPostIn">
+    <wsdl:part name="websiteConfigID" type="s:string" />
+    <wsdl:part name="countryID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCountryByIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:Country" />
+  </wsdl:message>
+  <wsdl:message name="GetEventPerformersHttpPostIn">
+    <wsdl:part name="websiteConfigID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEventPerformersHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfEventPerformer" />
+  </wsdl:message>
+  <wsdl:message name="SearchEventsHttpPostIn">
+    <wsdl:part name="websiteConfigID" type="s:string" />
+    <wsdl:part name="searchTerms" type="s:string" />
+    <wsdl:part name="whereClause" type="s:string" />
+    <wsdl:part name="orderByClause" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchEventsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfEvent" />
+  </wsdl:message>
+  <wsdl:message name="GetPricingInfoHttpPostIn">
+    <wsdl:part name="websiteConfigID" type="s:string" />
+    <wsdl:part name="eventID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPricingInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:PricingInformation" />
+  </wsdl:message>
+  <wsdl:message name="SearchPerformersHttpPostIn">
+    <wsdl:part name="websiteConfigID" type="s:string" />
+    <wsdl:part name="searchTerms" type="s:string" />
+    <wsdl:part name="whereClause" type="s:string" />
+    <wsdl:part name="orderByClause" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchPerformersHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfPerformer" />
+  </wsdl:message>
+  <wsdl:portType name="TNWebServiceSoap">
+    <wsdl:operation name="GetEvents">
+      <wsdl:input message="tns:GetEventsSoapIn" />
+      <wsdl:output message="tns:GetEventsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTickets">
+      <wsdl:input message="tns:GetTicketsSoapIn" />
+      <wsdl:output message="tns:GetTicketsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <wsdl:input message="tns:GetCategoriesSoapIn" />
+      <wsdl:output message="tns:GetCategoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoriesMasterList">
+      <wsdl:input message="tns:GetCategoriesMasterListSoapIn" />
+      <wsdl:output message="tns:GetCategoriesMasterListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <wsdl:input message="tns:GetCountriesSoapIn" />
+      <wsdl:output message="tns:GetCountriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByID">
+      <wsdl:input message="tns:GetCountryByIDSoapIn" />
+      <wsdl:output message="tns:GetCountryByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventPerformers">
+      <wsdl:input message="tns:GetEventPerformersSoapIn" />
+      <wsdl:output message="tns:GetEventPerformersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPerformerByCategory">
+      <wsdl:input message="tns:GetPerformerByCategorySoapIn" />
+      <wsdl:output message="tns:GetPerformerByCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSublevelCategories">
+      <wsdl:input message="tns:GetSublevelCategoriesSoapIn" />
+      <wsdl:output message="tns:GetSublevelCategoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVenue">
+      <wsdl:input message="tns:GetVenueSoapIn" />
+      <wsdl:output message="tns:GetVenueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVenueConfigurations">
+      <wsdl:input message="tns:GetVenueConfigurationsSoapIn" />
+      <wsdl:output message="tns:GetVenueConfigurationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHighInventoryPerformers">
+      <wsdl:input message="tns:GetHighInventoryPerformersSoapIn" />
+      <wsdl:output message="tns:GetHighInventoryPerformersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHighSalesPerformers">
+      <wsdl:input message="tns:GetHighSalesPerformersSoapIn" />
+      <wsdl:output message="tns:GetHighSalesPerformersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchEvents">
+      <wsdl:input message="tns:SearchEventsSoapIn" />
+      <wsdl:output message="tns:SearchEventsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStates">
+      <wsdl:input message="tns:GetStatesSoapIn" />
+      <wsdl:output message="tns:GetStatesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPricingInfo">
+      <wsdl:input message="tns:GetPricingInfoSoapIn" />
+      <wsdl:output message="tns:GetPricingInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchPerformers">
+      <wsdl:input message="tns:SearchPerformersSoapIn" />
+      <wsdl:output message="tns:SearchPerformersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPerformerByCategoryCompressed">
+      <wsdl:input message="tns:GetPerformerByCategoryCompressedSoapIn" />
+      <wsdl:output message="tns:GetPerformerByCategoryCompressedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsCompressed">
+      <wsdl:input message="tns:GetEventsCompressedSoapIn" />
+      <wsdl:output message="tns:GetEventsCompressedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketsCompressed">
+      <wsdl:input message="tns:GetTicketsCompressedSoapIn" />
+      <wsdl:output message="tns:GetTicketsCompressedSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TNWebServiceHttpGet">
+    <wsdl:operation name="GetCategories">
+      <wsdl:input message="tns:GetCategoriesHttpGetIn" />
+      <wsdl:output message="tns:GetCategoriesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoriesMasterList">
+      <wsdl:input message="tns:GetCategoriesMasterListHttpGetIn" />
+      <wsdl:output message="tns:GetCategoriesMasterListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <wsdl:input message="tns:GetCountriesHttpGetIn" />
+      <wsdl:output message="tns:GetCountriesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByID">
+      <wsdl:input message="tns:GetCountryByIDHttpGetIn" />
+      <wsdl:output message="tns:GetCountryByIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventPerformers">
+      <wsdl:input message="tns:GetEventPerformersHttpGetIn" />
+      <wsdl:output message="tns:GetEventPerformersHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchEvents">
+      <wsdl:input message="tns:SearchEventsHttpGetIn" />
+      <wsdl:output message="tns:SearchEventsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPricingInfo">
+      <wsdl:input message="tns:GetPricingInfoHttpGetIn" />
+      <wsdl:output message="tns:GetPricingInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchPerformers">
+      <wsdl:input message="tns:SearchPerformersHttpGetIn" />
+      <wsdl:output message="tns:SearchPerformersHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TNWebServiceHttpPost">
+    <wsdl:operation name="GetCategories">
+      <wsdl:input message="tns:GetCategoriesHttpPostIn" />
+      <wsdl:output message="tns:GetCategoriesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoriesMasterList">
+      <wsdl:input message="tns:GetCategoriesMasterListHttpPostIn" />
+      <wsdl:output message="tns:GetCategoriesMasterListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <wsdl:input message="tns:GetCountriesHttpPostIn" />
+      <wsdl:output message="tns:GetCountriesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByID">
+      <wsdl:input message="tns:GetCountryByIDHttpPostIn" />
+      <wsdl:output message="tns:GetCountryByIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventPerformers">
+      <wsdl:input message="tns:GetEventPerformersHttpPostIn" />
+      <wsdl:output message="tns:GetEventPerformersHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchEvents">
+      <wsdl:input message="tns:SearchEventsHttpPostIn" />
+      <wsdl:output message="tns:SearchEventsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPricingInfo">
+      <wsdl:input message="tns:GetPricingInfoHttpPostIn" />
+      <wsdl:output message="tns:GetPricingInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchPerformers">
+      <wsdl:input message="tns:SearchPerformersHttpPostIn" />
+      <wsdl:output message="tns:SearchPerformersHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TNWebServiceSoap" type="tns:TNWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEvents">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTickets">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetTickets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoriesMasterList">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetCategoriesMasterList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByID">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetCountryByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventPerformers">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetEventPerformers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerformerByCategory">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetPerformerByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSublevelCategories">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetSublevelCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVenue">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetVenue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVenueConfigurations">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetVenueConfigurations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHighInventoryPerformers">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetHighInventoryPerformers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHighSalesPerformers">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetHighSalesPerformers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchEvents">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/SearchEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStates">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetStates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPricingInfo">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetPricingInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPerformers">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/SearchPerformers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerformerByCategoryCompressed">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetPerformerByCategoryCompressed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsCompressed">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetEventsCompressed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketsCompressed">
+      <soap:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetTicketsCompressed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TNWebServiceSoap12" type="tns:TNWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEvents">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetEvents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTickets">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetTickets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetCategories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoriesMasterList">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetCategoriesMasterList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetCountries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByID">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetCountryByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventPerformers">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetEventPerformers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerformerByCategory">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetPerformerByCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSublevelCategories">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetSublevelCategories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVenue">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetVenue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVenueConfigurations">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetVenueConfigurations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHighInventoryPerformers">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetHighInventoryPerformers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHighSalesPerformers">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetHighSalesPerformers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchEvents">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/SearchEvents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStates">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetStates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPricingInfo">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetPricingInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPerformers">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/SearchPerformers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerformerByCategoryCompressed">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetPerformerByCategoryCompressed" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsCompressed">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetEventsCompressed" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTicketsCompressed">
+      <soap12:operation soapAction="http://tnwebservices.ticketnetwork.com/tnwebservice/v3.1/GetTicketsCompressed" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TNWebServiceHttpGet" type="tns:TNWebServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetCategories">
+      <http:operation location="/GetCategories" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoriesMasterList">
+      <http:operation location="/GetCategoriesMasterList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <http:operation location="/GetCountries" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByID">
+      <http:operation location="/GetCountryByID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventPerformers">
+      <http:operation location="/GetEventPerformers" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchEvents">
+      <http:operation location="/SearchEvents" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPricingInfo">
+      <http:operation location="/GetPricingInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPerformers">
+      <http:operation location="/SearchPerformers" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TNWebServiceHttpPost" type="tns:TNWebServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetCategories">
+      <http:operation location="/GetCategories" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoriesMasterList">
+      <http:operation location="/GetCategoriesMasterList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountries">
+      <http:operation location="/GetCountries" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryByID">
+      <http:operation location="/GetCountryByID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventPerformers">
+      <http:operation location="/GetEventPerformers" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchEvents">
+      <http:operation location="/SearchEvents" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPricingInfo">
+      <http:operation location="/GetPricingInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPerformers">
+      <http:operation location="/SearchPerformers" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TNWebService">
+    <wsdl:port name="TNWebServiceSoap" binding="tns:TNWebServiceSoap">
+      <soap:address location="http://tnwebservices-test.ticketnetwork.com/tnwebservice/v3.1/TNWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TNWebServiceSoap12" binding="tns:TNWebServiceSoap12">
+      <soap12:address location="http://tnwebservices-test.ticketnetwork.com/tnwebservice/v3.1/TNWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TNWebServiceHttpGet" binding="tns:TNWebServiceHttpGet">
+      <http:address location="http://tnwebservices-test.ticketnetwork.com/tnwebservice/v3.1/TNWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TNWebServiceHttpPost" binding="tns:TNWebServiceHttpPost">
+      <http:address location="http://tnwebservices-test.ticketnetwork.com/tnwebservice/v3.1/TNWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- always make sure to have an [expiration date > today] on new additions to the xml -->
+<promoBox>
+	<slide>
+		<title>Gabriel Iglesias Tickets</title>
+		<img>gabrielIglesias.jpg</img>
+		<url>/tickets/search.aspx?kwds=gabriel%20iglesias</url>
+		<description>Gabriel Iglesias is Hot, Fluffy, and is On Tour until May!</description>
+		<venue>NationWide</venue>
+		<eventDate>---</eventDate>
+		<startDate></startDate>
+		<expires>5/20/13</expires>
+	</slide>	
+	<slide>
+		<title>Wicked</title>
+		<img>wicked.jpg</img>
+		<url>/tickets/event.aspx?event=Wicked</url>
+		<description>See the other side of the famous story through the eyes of the Wicked Witch of the West – check out all Wicked tickets here!</description>
+		<venue>Nationwide</venue>
+		<eventDate>---</eventDate>
+		<startDate></startDate>
+		<expires>12/06/13</expires>
+	</slide>
+	<slide>
+		<title>Upcoming UFC Events</title>
+		<img>UFC.jpg</img>
+		<url>/tickets/search.aspx?kwds=ufc</url>
+		<description>UFC is getting better than ever.  Don't miss out, get your tickets now!</description>
+		<venue>Las Vegas, NV &amp; NationWide</venue>
+		<eventDate>---</eventDate>
+		<startDate></startDate>
+		<expires>03/30/13</expires>
+	</slide>
+	<slide>
+		<title>Anjelah Johnson</title>
+		<img>anjelah.jpg</img>
+		<url>/tickets/ResultsTicket.aspx?evtid=1674887&amp;event=Anjelah+Johnson</url>
+		<description>Catch Anjelah Johnson when she comes to Seattle; nail salon, anyone?</description>
+		<venue>The Paramount Theatre</venue>
+		<eventDate>1/28/13</eventDate>
+		<startDate></startDate>
+		<expires>12/31/13</expires>
+	</slide>
+</promoBox>

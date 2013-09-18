@@ -1,0 +1,136 @@
+﻿
+/*  BEGIN: home page ******************************************************/
+
+
+#homePage{ padding:0 0 0 5px; width:510px; }
+#homePage .tn_results_header{ display:none; }
+
+
+#promoBox
+{
+	border:1px solid #999;
+	height:300px;
+	overflow:hidden;
+	position:relative;
+	width:530px;
+}
+#promoImages, #promoTxtBckgrnd, #promoTxt, #promoBoxNav, #promoBoxBtn
+{
+	position:absolute;
+	z-index:10;
+}
+#promoImages
+{
+	z-index:0;
+}
+#promoImgs img
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:1;
+		
+	display:none;
+	height:300px;
+	width:530px;
+}
+#promoTxtBckgrnd
+{
+	background-color:#6e878c;
+	bottom:0px;
+	filter:alpha(opacity=90); opacity:0.9; -moz-opacity:0.9;
+	height:60px;
+	left:0px;
+	width:530px;
+	z-index:10;
+}
+#promoTxt
+{
+	bottom:0px;
+	height:60px;
+	left:0px;		
+	width:530px;
+	z-index:11;
+}
+#promoTxt h1
+{
+	color:#fff;
+	font-size:15px;
+	margin:10px 10px 0;
+}
+#promoTxt span
+{
+	color:#fff;
+	display:inline-block;
+	font-size:11px;
+	margin:0 10px 10px 20px;
+}
+#promoTxt div
+{
+	color:#000;
+	font-size:12px;	
+	position:absolute;		
+	right:3px;
+	top:3px;
+}
+#promoBoxBtn:link, #promoBoxBtn:visited, #promoBoxBtn:active, #promoBoxBtn:hover
+{
+	left:4px;	
+	top:6px;
+	visibility:hidden;
+}
+#promoBoxBtn img{ border:none; }
+#promoBox #promoBoxNav
+{
+	position:absolute;
+	top:32px;
+	left:2px;
+	z-index:20;
+}
+#promoBoxNav li
+{
+	background-color:#F2EFDE;
+	border:1px solid #777;
+	color:#333;
+	cursor:pointer;
+	float:left;
+	font-size:11px;
+	margin:0px 2px;
+	padding:1px 3px;
+}
+#promoBox #promoBoxNav li.active
+{
+	background-color:#333;
+	color:#eee;
+	cursor:pointer;
+	font-weight:bold;
+}		
+
+#usCity_events
+{
+	text-align:center;
+	width:530px;		
+}
+#usCity_events .navHdr
+{
+	background-color:#161f24;
+	border:1px solid #ccc;
+	color:#fff;
+	padding:4px 0 4px 7px;
+	text-align:left;
+}
+#usCity_events ul
+{
+	margin:10px 0 10px 20px;
+	width:150px;
+}
+#usCity_events li a
+{
+	color:#777;	
+}
+#usCity_events li a:hover
+{
+	text-decoration:underline;
+}
+
+/*  END: home page ******************************************************/

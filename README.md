@@ -1,1 +1,1 @@
-http://leroysrants.com/the-rants/code-rockstar-seating
+http://leroysrants.com/asp-net-c-with-mysql/
